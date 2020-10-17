@@ -2,6 +2,7 @@ package com.codepath.apps.restclienttemplate;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -58,7 +59,7 @@ public class ComposeActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 if (s.length() <= 280){
-                    tvCharacterCount.setText(Integer.toString(s.length()) + "/280");
+                    tvCharacterCount.setText(String.format("%d/280", s.length()));
                 }
 
             }
